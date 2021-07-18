@@ -1,0 +1,16 @@
+{% extends "posts/base.html" %} {% load crispy_forms_tags %} {% block content %}
+<div class="content-section">
+    <form method="POST">{% csrf_token %}
+        <legend>create your own post</legend>
+        <fieldset>
+            {{form|crispy}}
+        </fieldset>
+
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">post</button>
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}
